@@ -48,15 +48,10 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at cells: "Apply Sobel Threshold" , "Apply Magnitude of the Gradient" , "Apply Direction of the Gradient" and "Apply HLS Threshold").  
 
 Then I created a Pipeline function to combine all the thresholds together. For the Pipeline I defined, I used:
-
-1. s channel from HLS function
-
+1.s channel from HLS function
 2.get the x sobel
-
 3.get the y sobel
-
 4.apply magnitude threshold
-
 5.apply direct thresthold
 
 Here's an example of my output for this step.  (note: this is not actually from one of the test images)
