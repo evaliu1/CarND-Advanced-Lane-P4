@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 
 #### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in the first code cell of the IPython notebook.
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
@@ -45,7 +45,22 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at cells: "Apply Sobel Threshold" , "Apply Magnitude of the Gradient" , "Apply Direction of the Gradient" and "Apply HLS Threshold").  
+
+Then I created a Pipeline function to combine all the thresholds together. For the Pipeline I defined, I used:
+
+1. s channel from HLS function
+
+2.get the x sobel
+
+3.get the y sobel
+
+4.apply magnitude threshold
+
+5.apply direct thresthold
+
+Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+
 
 ![alt text](https://github.com/evaliu1/CarND-Advanced-Lane-P4/blob/master/Images/image_threshold.PNG)
 
