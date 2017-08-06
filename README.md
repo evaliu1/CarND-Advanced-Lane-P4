@@ -89,7 +89,7 @@ I defined two functions to calculate the curvature and car position("car_distanc
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I combined all the steps for image process and calculating curvature and car position in my code in the function `Img_Pipeline()`.  Then I called this function to process all the test images, here is an example of my result on a test image:
 
 ![Color img](https://github.com/evaliu1/CarND-Advanced-Lane-P4/blob/master/Images/Color_img.JPG)
 
@@ -99,7 +99,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](https://github.com/evaliu1/CarND-Advanced-Lane-P4/blob/master/output.mp4)
 
 ---
 
@@ -108,4 +108,4 @@ Here's a [link to my video result](./project_video.mp4)
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 During the time I implemented this project, I mixed with the output parameters couple times. Sincer their names are very similar inside each function.
-For my current pipeline, I think it might fail when there is a sharp trun. 
+For my current pipeline, I think it might fail when there is a sharp trun. Also, the lines are not so straight at the beginning. Maybe I should adjust my threshold more to make this better.
