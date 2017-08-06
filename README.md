@@ -91,7 +91,7 @@ I defined two functions to calculate the curvature and car position("car_distanc
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
-
+![Color img](https://github.com/evaliu1/CarND-Advanced-Lane-P4/blob/master/Images/Color_img.JPG)
 
 ---
 
